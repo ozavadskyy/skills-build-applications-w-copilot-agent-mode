@@ -47,6 +47,7 @@ app.get('/api/workouts/', async (_req, res) => {
 
 app.listen(port, () => {
   const codespaceName = process.env.CODESPACE_NAME;
+  // Prefer the forwarded Codespaces URL when available, otherwise fall back to localhost.
   const baseUrl = codespaceName
     ? `https://${codespaceName}-8000.app.github.dev`
     : `http://localhost:${port}`;
