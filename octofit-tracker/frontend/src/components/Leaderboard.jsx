@@ -18,6 +18,7 @@ function Leaderboard({ apiBaseUrl }) {
       try {
         setLoading(true)
         setError('')
+        // Codespaces API format: https://<codespace>-8000.app.github.dev/api/leaderboard
         const response = await fetch(`${apiBaseUrl}/leaderboard/`)
         if (!response.ok) {
           throw new Error(`Request failed with status ${response.status}`)

@@ -18,6 +18,7 @@ function Users({ apiBaseUrl }) {
       try {
         setLoading(true)
         setError('')
+        // Codespaces API format: https://<codespace>-8000.app.github.dev/api/users
         const response = await fetch(`${apiBaseUrl}/users/`)
         if (!response.ok) {
           throw new Error(`Request failed with status ${response.status}`)

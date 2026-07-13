@@ -18,6 +18,7 @@ function Workouts({ apiBaseUrl }) {
       try {
         setLoading(true)
         setError('')
+        // Codespaces API format: https://<codespace>-8000.app.github.dev/api/workouts
         const response = await fetch(`${apiBaseUrl}/workouts/`)
         if (!response.ok) {
           throw new Error(`Request failed with status ${response.status}`)
