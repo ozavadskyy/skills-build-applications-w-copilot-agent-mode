@@ -96,11 +96,14 @@ jobs:
           vars: |
             step_number: 3
             results_table:
-              - description: "Check database.ts for octofit_db"
+              -
+                description: "Check database.ts for octofit_db"
                 passed: ${{ steps.check-octofit-db.outcome == 'success' }}
-              - description: "Check database.ts for mongoose"
+              -
+                description: "Check database.ts for mongoose"
                 passed: ${{ steps.check-mongoose-config.outcome == 'success' }}
-              - description: "Check seed.ts for test data seed description"
+              -
+                description: "Check seed.ts for test data seed description"
                 passed: ${{ steps.check-seed-script.outcome == 'success' }}
 
       # END: Check practical exercise

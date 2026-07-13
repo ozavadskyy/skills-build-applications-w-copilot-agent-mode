@@ -87,9 +87,11 @@ jobs:
           vars: |
             step_number: 4
             results_table:
-              - description: "Check server.ts for CODESPACE_NAME"
+              -
+                description: "Check server.ts for CODESPACE_NAME"
                 passed: ${{ steps.check-codespace-name.outcome == 'success' }}
-              - description: "Check server.ts for codespace URL"
+              -
+                description: "Check server.ts for codespace URL"
                 passed: ${{ steps.check-codespace-url.outcome == 'success' }}
 
       # END: Check practical exercise

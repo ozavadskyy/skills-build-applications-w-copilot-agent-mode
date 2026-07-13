@@ -97,11 +97,14 @@ jobs:
           vars: |
             step_number: 2
             results_table:
-              - description: "Check frontend package.json for React 19"
+              -
+                description: "Check frontend package.json for React 19"
                 passed: ${{ steps.check-react-19.outcome == 'success' }}
-              - description: "Check backend package.json for Express"
+              -
+                description: "Check backend package.json for Express"
                 passed: ${{ steps.check-express.outcome == 'success' }}
-              - description: "Check backend package.json for Mongoose"
+              -
+                description: "Check backend package.json for Mongoose"
                 passed: ${{ steps.check-mongoose.outcome == 'success' }}
 
       # END: Check practical exercise
