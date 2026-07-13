@@ -16,6 +16,7 @@ const port = Number(process.env.PORT || 8000);
 app.use(cors());
 app.use(express.json());
 
+// Lightweight probe endpoint for uptime checks.
 app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok' });
 });
